@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class MainMenuController : MonoBehaviour
 {
-    [SerializeField] private int gameSceneIndex =2;
+    private int gameSceneIndex = 0 ;
 
     public void PlayGame()
     {
