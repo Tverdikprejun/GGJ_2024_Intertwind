@@ -8,23 +8,20 @@ public class CableTip : MonoBehaviour , IBeginDragHandler, IEndDragHandler, IDra
     private float distanceToCamera;
 
     private Outlet _currentOutlet;
-
+    private bool isCanStay;
     private void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("Here1");
 
         if (!other.TryGetComponent<Outlet>(out var otherOutlet)) { return; }
 
-        Debug.Log("Here2");
 
         if (otherOutlet.GetIsOccupied()) 
         {
-            Debug.Log("Here3");
+            isCanStay = false;
             return;
         }
 
-        Debug.Log("Here4");
-
+        isCanStay = true;
         _currentOutlet = otherOutlet;
         _currentOutlet.SetCableTip(this);
     }
@@ -38,6 +35,7 @@ public class CableTip : MonoBehaviour , IBeginDragHandler, IEndDragHandler, IDra
         _currentOutlet.ResetCableTip();
 
         _currentOutlet = null;
+        isCanStay = false;
     }
 
     void IBeginDragHandler.OnBeginDrag(PointerEventData eventData)
@@ -62,8 +60,8 @@ public class CableTip : MonoBehaviour , IBeginDragHandler, IEndDragHandler, IDra
         // check here for "am i close enough to where I'm meant to be"
 
         // if not "where I'm supposed to be" reset
-
-           // objectBeingDragged.transform.position = startPosition;
+        if(!isCanStay) { 
+            objectBeingDragged.transform.position = startPosition;}
         objectBeingDragged.layer = LayerMask.NameToLayer("Default");
         objectBeingDragged = null;
     }

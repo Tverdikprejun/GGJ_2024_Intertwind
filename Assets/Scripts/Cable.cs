@@ -15,7 +15,15 @@ public class Cable : MonoBehaviour
 
     private LineRenderer lineRenderer;
 
-    private Vector3[] tipsPositions = new Vector3[2];
+    private EdgeCollider2D edgeCollider;
+
+    private bool isShorted;
+
+    private Cable shortedCable;
+
+    private Vector3[] tipsPositionsVector3 = new Vector3[2];
+
+    private List<Vector2> tipsPositionsVector2 = new List<Vector2>();
     void Start()
     {
         lineRenderer = GetComponent<LineRenderer>();
@@ -23,8 +31,11 @@ public class Cable : MonoBehaviour
 
     private void Update()
     {
-        tipsPositions[0] = new Vector3(bottomTip.transform.position.x, bottomTip.transform.position.y, bottomTip.transform.position.z);
-        tipsPositions[1] = new Vector3(topTip.transform.position.x, topTip.transform.position.y, topTip.transform.position.z);
-        lineRenderer.SetPositions(tipsPositions);
+        tipsPositionsVector2 = new List<Vector2>();
+        tipsPositionsVector3[0] = new Vector3(bottomTip.transform.position.x, bottomTip.transform.position.y, bottomTip.transform.position.z);
+        tipsPositionsVector3[1] = new Vector3(topTip.transform.position.x, topTip.transform.position.y, topTip.transform.position.z);
+
+        lineRenderer.SetPositions(tipsPositionsVector3);
     }
+
 }
