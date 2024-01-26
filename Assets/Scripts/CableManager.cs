@@ -33,6 +33,10 @@ public class CableManager : MonoBehaviour
     {
         foreach (Cable cable in cables)
         {
+            cable.isShorted = false;
+        }
+            foreach (Cable cable in cables)
+        {
             foreach (Cable cable2 in cables)
             {
                if(GetCablesIntersection(cable.GetStartX(),cable.GetStartY(),cable.GetEndX(),cable.GetEndY(),
@@ -41,11 +45,7 @@ public class CableManager : MonoBehaviour
                     cable.isShorted = true;
                     cable2.isShorted = true;
                 }
-                else if(cable != cable2)
-                {
-                    cable.isShorted = false;
-                    cable2.isShorted = false;
-                }
+                
             }
         }
     }
