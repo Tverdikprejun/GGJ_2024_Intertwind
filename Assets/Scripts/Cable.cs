@@ -17,7 +17,7 @@ public class Cable : MonoBehaviour
 
     private EdgeCollider2D edgeCollider;
 
-    private bool isShorted;
+    public bool isShorted;
 
     private Cable shortedCable;
 
@@ -36,6 +36,28 @@ public class Cable : MonoBehaviour
         tipsPositionsVector3[1] = new Vector3(topTip.transform.position.x, topTip.transform.position.y, topTip.transform.position.z);
 
         lineRenderer.SetPositions(tipsPositionsVector3);
-    }
 
+        if (isShorted ) { lineRenderer.SetColors(Color.red, Color.red); }
+        else { lineRenderer.SetColors(Color.blue, Color.blue); }
+    }
+    public float GetStartX()
+    {
+        Debug.Log(lineRenderer.GetPosition(0).x);
+        return lineRenderer.GetPosition(0).x;
+    }
+    public float GetEndX()
+    {
+        Debug.Log(lineRenderer.GetPosition(1).x);
+        return lineRenderer.GetPosition(1).x;
+    }
+    public float GetStartY()
+    {
+        Debug.Log(lineRenderer.GetPosition(0).y);
+        return lineRenderer.GetPosition(0).y;
+    }
+    public float GetEndY()
+    {
+        Debug.Log(lineRenderer.GetPosition(1).y);
+        return lineRenderer.GetPosition(1).y;
+    }
 }
