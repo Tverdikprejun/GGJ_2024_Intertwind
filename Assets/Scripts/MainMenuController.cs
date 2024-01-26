@@ -11,7 +11,7 @@ public class MainMenuController : MonoBehaviour
     {
         SceneManager.LoadScene(gameSceneIndex);
     }
-
+  
     public void ExitGame()
     {
         Application.Quit();
