@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -46,9 +47,14 @@ public class TimerManager : MonoBehaviour
             }
 
             currentTimer = currentTimer - intervalsTime;
-            Debug.Log($"Current time: {currentTimer} ; DeltaTIme: {Time.deltaTime}");
+            Debug.Log($"Current time: {currentTimer} ; Percentage: {GetRemainingTimeNormalized(currentTimer, timeToCompleteLevel)}");
 
             yield return new WaitForSeconds( intervalsTime );
         }
+    }
+
+    private float GetRemainingTimeNormalized(float currentTimer, float timeToCompleteLevel)
+    {
+        return currentTimer / timeToCompleteLevel;
     }
 }
