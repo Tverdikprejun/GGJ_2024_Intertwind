@@ -11,12 +11,18 @@ public class CableTip : MonoBehaviour , IBeginDragHandler, IEndDragHandler, IDra
 
     private LineRenderer lineRenderer;
 
+    private Collider outlet;
+    private Collider outlet2;
+
     private void Start()
     {
         lineRenderer = GetComponent<LineRenderer>();
     }
 
-
+    private void OnTriggerStay(Collider other)
+    {
+        outlet = other;
+    }
     void IBeginDragHandler.OnBeginDrag(PointerEventData eventData)
     {
         objectBeingDragged = gameObject;
@@ -39,7 +45,9 @@ public class CableTip : MonoBehaviour , IBeginDragHandler, IEndDragHandler, IDra
         // check here for "am i close enough to where I'm meant to be"
 
         // if not "where I'm supposed to be" reset
-        objectBeingDragged.transform.position = startPosition;
+
+        
+        //objectBeingDragged.transform.position = startPosition;
         objectBeingDragged.layer = LayerMask.NameToLayer("Default");
         objectBeingDragged = null;
     }
