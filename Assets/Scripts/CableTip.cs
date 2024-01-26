@@ -5,25 +5,19 @@ using UnityEngine.EventSystems;
 
 public class CableTip : MonoBehaviour , IBeginDragHandler, IEndDragHandler, IDragHandler
 {
-    public static GameObject objectBeingDragged;
-    public Vector3 startPosition;
-    public float distanceToCamera;
+    private static GameObject objectBeingDragged;
+    private Vector3 startPosition;
+    private float distanceToCamera;
 
-    private LineRenderer lineRenderer;
-
-    private Collider outlet;
-
-    private bool isTouching;
+    private Collider2D outlet;
 
     private void Start()
     {
-        lineRenderer = GetComponent<LineRenderer>();
+
     }
 
-    private void OnTriggerStay(Collider other)
+    private void OnTriggerStay2D(Collider2D other)
     {
-        outlet = other;
-        isTouching = true;
 
     }
     void IBeginDragHandler.OnBeginDrag(PointerEventData eventData)
@@ -49,14 +43,8 @@ public class CableTip : MonoBehaviour , IBeginDragHandler, IEndDragHandler, IDra
 
         // if not "where I'm supposed to be" reset
 
-        if (!isTouching)
-        {
-            objectBeingDragged.transform.position = startPosition;
-        }
+           // objectBeingDragged.transform.position = startPosition;
         objectBeingDragged.layer = LayerMask.NameToLayer("Default");
         objectBeingDragged = null;
     }
-
-
-    public LineRenderer GetLineRenderer() => lineRenderer;
 }
