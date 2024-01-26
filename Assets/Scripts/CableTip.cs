@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -9,17 +7,39 @@ public class CableTip : MonoBehaviour , IBeginDragHandler, IEndDragHandler, IDra
     private Vector3 startPosition;
     private float distanceToCamera;
 
-    private Collider2D outlet;
+    private Outlet _currentOutlet;
 
-    private void Start()
+    private void OnTriggerEnter2D(Collider2D other)
     {
+        Debug.Log("Here1");
 
+        if (!other.TryGetComponent<Outlet>(out var otherOutlet)) { return; }
+
+        Debug.Log("Here2");
+
+        if (otherOutlet.GetIsOccupied()) 
+        {
+            Debug.Log("Here3");
+            return;
+        }
+
+        Debug.Log("Here4");
+
+        _currentOutlet = otherOutlet;
+        _currentOutlet.SetCableTip(this);
     }
 
-    private void OnTriggerStay2D(Collider2D other)
+    private void OnTriggerExit2D(Collider2D other)
     {
+        if (!other.TryGetComponent<Outlet>(out _)) { return; }
 
+        if (_currentOutlet == null) { return; }
+
+        _currentOutlet.ResetCableTip();
+
+        _currentOutlet = null;
     }
+
     void IBeginDragHandler.OnBeginDrag(PointerEventData eventData)
     {
         objectBeingDragged = gameObject;

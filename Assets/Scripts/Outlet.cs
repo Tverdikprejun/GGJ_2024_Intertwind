@@ -1,18 +1,16 @@
+using System;
 using UnityEngine;
 
 public class Outlet : MonoBehaviour
 {
     private CableTip _currentCableTip = null;
 
+    public bool GetIsOccupied() => _currentCableTip != null;
 
-    private void OnTriggerStay2D(Collider2D other)
+    public void SetCableTip(CableTip cableTip)
     {
-        Debug.Log("WTF");
-
-        if (!other.TryGetComponent<CableTip>(out CableTip otherCableTip)) {  return; }
-
-        _currentCableTip = otherCableTip;
-
-        Debug.Log($"Cable tip found and updated! {_currentCableTip.name}");
+        _currentCableTip = cableTip;
     }
+
+    public void ResetCableTip() { _currentCableTip = null; }
 }
