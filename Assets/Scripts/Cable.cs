@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class Cable : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHandler
+public class Cable : MonoBehaviour
 {
 
     [SerializeField]
@@ -13,30 +13,36 @@ public class Cable : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHan
     [SerializeField]
     private CableTip topTip;
 
+    private LineRenderer lineRenderer;
 
-    private RectTransform rectTransform;
-    private Image image;
+    private Vector3[] tipsPositions;
     void Start()
     {
-        rectTransform = GetComponent<RectTransform>();
-        image = GetComponent<Image>();
+        lineRenderer = GetComponent<LineRenderer>();
     }
 
-    public void OnBeginDrag(PointerEventData eventData)
+    private void Update()
     {
-        image.color = new Color(255, 255, 255, 170);
+        tipsPositions[0] = new Vector3(bottomTip.transform.position.x, bottomTip.transform.position.y, bottomTip.transform.position.z);
+        tipsPositions[1] = new Vector3(bottomTip.transform.position.x, bottomTip.transform.position.y, bottomTip.transform.position.z);
+        lineRenderer.SetPositions(tipsPositions);
     }
 
-    public void OnDrag(PointerEventData eventData)
-    {
-        rectTransform.anchoredPosition += eventData.delta;
-        transform.position = Input.mousePosition;
-    }
+    //public void OnBeginDrag(PointerEventData eventData)
+    //{
+    //    image.color = new Color(255, 255, 255, 170);
+    //}
 
-    public void OnEndDrag(PointerEventData eventData)
-    {
-        image.color = new Color(255, 255, 255, 170);
-    }
+    //public void OnDrag(PointerEventData eventData)
+    //{
+    //    rectTransform.anchoredPosition += eventData.delta;
+    //    transform.position = Input.mousePosition;
+    //}
+
+    //public void OnEndDrag(PointerEventData eventData)
+    //{
+    //    image.color = new Color(255, 255, 255, 170);
+    //}
 
     //bool canMove;
     //bool dragging;

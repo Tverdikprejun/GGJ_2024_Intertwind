@@ -16,10 +16,6 @@ public class CableTip : MonoBehaviour , IBeginDragHandler, IEndDragHandler, IDra
         lineRenderer = GetComponent<LineRenderer>();
     }
 
-    private void Update()
-    {
-        
-    }
 
     void IBeginDragHandler.OnBeginDrag(PointerEventData eventData)
     {
