@@ -4,12 +4,15 @@ using UnityEngine;
 
 public class Outlet : MonoBehaviour
 {
-    [SerializeField] private bool isOccupiedOnStartup;
+    [SerializeField]
+    private bool isOccupiedOnStartup;
 
     private bool IsOccupied;
 
     private void Start()
     {
         IsOccupied = isOccupiedOnStartup;
+
+        Debug.Log($"This outlet is occupied: {IsOccupied}");
     }
 }
