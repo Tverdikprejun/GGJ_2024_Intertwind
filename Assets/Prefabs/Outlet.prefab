@@ -27,7 +27,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.3, y: 0.3, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6885618164391487913}
@@ -73,12 +73,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: b047f4084f902e044b1eccc83c6aabe2, type: 3}
+  m_Sprite: {fileID: 21300000, guid: cfe3afb51cdba5d43a0776cad5114003, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 2.63, y: 1.48}
+  m_Size: {x: 15.14, y: 16.53}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -95,6 +95,7 @@ GameObject:
   - component: {fileID: 6885618164391487913}
   - component: {fileID: 3959806538834647337}
   - component: {fileID: -7486191788094942822}
+  - component: {fileID: 3591309834233569038}
   m_Layer: 0
   m_Name: Outlet
   m_TagString: Untagged
@@ -130,7 +131,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20f5514dd60a1ac419c1cb0a5dcbd1a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isOccupiedOnStartup: 1
+  occupiedSprite: {fileID: 21300000, guid: 5efb7780f1a216b4496278941109f9b7, type: 3}
+  nonOccupiedSprite: {fileID: 21300000, guid: cfe3afb51cdba5d43a0776cad5114003, type: 3}
 --- !u!61 &-7486191788094942822
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -176,3 +178,30 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!50 &3591309834233569038
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3870028642547056280}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
