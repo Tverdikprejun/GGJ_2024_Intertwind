@@ -5,9 +5,10 @@ using UnityEngine;
 public class LevelSelectionManeger : MonoBehaviour
 {
     int numberOfScnce;
-    int[] scenes = {0,1,2,3,4,5,6,7,8};
+    int[] scenes = { 0, 1, 2, 3, 4, 5, 6, 7, 8 };
 
     public void SelectLevel()
     {
 
     }
+}

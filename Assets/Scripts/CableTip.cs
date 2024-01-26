@@ -60,8 +60,8 @@ public class CableTip : MonoBehaviour , IBeginDragHandler, IEndDragHandler, IDra
         // check here for "am i close enough to where I'm meant to be"
 
         // if not "where I'm supposed to be" reset
-        if(!isCanStay) { 
-            objectBeingDragged.transform.position = startPosition;}
+        //if(!isCanStay) { 
+          //  objectBeingDragged.transform.position = startPosition;}
         objectBeingDragged.layer = LayerMask.NameToLayer("Default");
         objectBeingDragged = null;
     }
