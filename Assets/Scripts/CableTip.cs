@@ -12,7 +12,8 @@ public class CableTip : MonoBehaviour , IBeginDragHandler, IEndDragHandler, IDra
     private LineRenderer lineRenderer;
 
     private Collider outlet;
-    private Collider outlet2;
+
+    private bool isTouching;
 
     private void Start()
     {
@@ -22,6 +23,8 @@ public class CableTip : MonoBehaviour , IBeginDragHandler, IEndDragHandler, IDra
     private void OnTriggerStay(Collider other)
     {
         outlet = other;
+        isTouching = true;
+
     }
     void IBeginDragHandler.OnBeginDrag(PointerEventData eventData)
     {
@@ -46,8 +49,10 @@ public class CableTip : MonoBehaviour , IBeginDragHandler, IEndDragHandler, IDra
 
         // if not "where I'm supposed to be" reset
 
-        
-        //objectBeingDragged.transform.position = startPosition;
+        if (!isTouching)
+        {
+            objectBeingDragged.transform.position = startPosition;
+        }
         objectBeingDragged.layer = LayerMask.NameToLayer("Default");
         objectBeingDragged = null;
     }
