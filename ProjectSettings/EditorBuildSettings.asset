@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/Scenes/LevelSelection.unity
     guid: a6fc1f43d09f3744cb53143106a0bbda
   - enabled: 1
+    path: Assets/Scenes/LevelOne.unity
+    guid: aa717a34f8681f546bad9ceca13c3c00
+  - enabled: 1
     path: Assets/Scenes/MyroScene.unity
     guid: d0601d6b0d5b5924a82af4e48921122e
   - enabled: 1
