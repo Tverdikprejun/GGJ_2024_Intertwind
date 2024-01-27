@@ -17,12 +17,9 @@ public class Outlet : MonoBehaviour
     [SerializeField]
     public string color;
 
-    public bool GetIsOccupied()
-    {
-        if(_currentCableTip != null &&_currentCableTip.color == color)return true;
-        else return false;
-    }
+    public bool isWinCondition;
 
+    public bool GetIsOccupied()=> _currentCableTip != null;
     private void Start()
     {
         Color blue = new Color32(65, 160, 255,255);
@@ -42,12 +39,22 @@ public class Outlet : MonoBehaviour
     public void SetCableTip(CableTip cableTip)
     {
         _currentCableTip = cableTip;
-        ChangeSprite(true);
+        if (cableTip.color == color)
+        {
+            isWinCondition = true;
+            ChangeSprite(true);
+        }
+        else
+        {
+            isWinCondition = false;
+            ChangeSprite(false);
+        }
     }
 
     public void ResetCableTip() 
     { 
         _currentCableTip = null;
+        isWinCondition = false;
         ChangeSprite(false);
     }
 
