@@ -100,7 +100,7 @@ LineRenderer:
       m_RotationOrder: 4
     colorGradient:
       serializedVersion: 2
-      key0: {r: 0.20754719, g: 0.102794595, b: 0.102794595, a: 1}
+      key0: {r: 1, g: 1, b: 1, a: 1}
       key1: {r: 0.048089504, g: 0, b: 1, a: 1}
       key2: {r: 1, g: 1, b: 1, a: 0}
       key3: {r: 0, g: 0, b: 0, a: 0}
@@ -154,6 +154,7 @@ MonoBehaviour:
   _interseptionEffectSprite: {fileID: 0}
   bottomTip: {fileID: 0}
   topTip: {fileID: 0}
+  color: 
   isShorted: 0
 --- !u!68 &1505758213565123062
 EdgeCollider2D:

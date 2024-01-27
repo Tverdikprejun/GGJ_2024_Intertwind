@@ -35,7 +35,7 @@ public class CableTip : MonoBehaviour , IBeginDragHandler, IEndDragHandler, IDra
         _currentOutlet.ResetCableTip();
 
         _currentOutlet = null;
-        isCanStay = true;
+        isCanStay = false;
     }
 
     void IBeginDragHandler.OnBeginDrag(PointerEventData eventData)

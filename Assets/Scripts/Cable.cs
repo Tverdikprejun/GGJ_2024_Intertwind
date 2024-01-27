@@ -15,6 +15,9 @@ public class Cable : MonoBehaviour
     [SerializeField]
     private CableTip topTip;
 
+    [SerializeField]
+    public string color;
+
     private LineRenderer lineRenderer;
 
     public bool isShorted;
@@ -24,10 +27,25 @@ public class Cable : MonoBehaviour
     void Start()
     {
         lineRenderer = GetComponent<LineRenderer>();
+        
     }
 
     private void Update()
     {
+        if (color == "blue")
+        {
+            //lineRenderer.SetColors(new Color(65, 160, 255), new Color(65, 160, 255));
+            //lineRenderer.material = new Material(Shader.Find("Sprites/Default"));
+            //lineRenderer.SetColors(new Color(65, 160, 255), new Color(65, 160, 255));
+            lineRenderer.SetColors(Color.blue, Color.blue);
+        }
+        if (color == "red")
+        {
+            //lineRenderer.material = new Material(Shader.Find("Sprites/Default"));
+            //lineRenderer.SetColors(new Color(65, 160, 255), new Color(65, 160, 255));
+            //lineRenderer.SetColors(new Color(255, 75, 65), new Color(255, 75, 65));
+            lineRenderer.SetColors(Color.red, Color.red);
+        }
         tipsPositionsVector3[0] = new Vector3(bottomTip.transform.position.x, bottomTip.transform.position.y, bottomTip.transform.position.z);
         tipsPositionsVector3[1] = new Vector3(topTip.transform.position.x, topTip.transform.position.y, topTip.transform.position.z);
 

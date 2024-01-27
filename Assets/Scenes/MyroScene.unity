@@ -277,6 +277,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dc70e5da6b98b7643bdbc9fa8ad40410, type: 3}
+--- !u!114 &36833922 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1636457205848031115, guid: dc70e5da6b98b7643bdbc9fa8ad40410, type: 3}
+  m_PrefabInstance: {fileID: 1652357085}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64ee7c39646b997499ef0a409d7c6945, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &61759270
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -452,6 +463,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4071902165593340071, guid: dc70e5da6b98b7643bdbc9fa8ad40410, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4071902165593340071, guid: dc70e5da6b98b7643bdbc9fa8ad40410, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4071902165593340071, guid: dc70e5da6b98b7643bdbc9fa8ad40410, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4071902165593340071, guid: dc70e5da6b98b7643bdbc9fa8ad40410, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6361972232737531033, guid: dc70e5da6b98b7643bdbc9fa8ad40410, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.71
@@ -501,6 +528,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dc70e5da6b98b7643bdbc9fa8ad40410, type: 3}
+--- !u!114 &943291572 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1636457205848031115, guid: dc70e5da6b98b7643bdbc9fa8ad40410, type: 3}
+  m_PrefabInstance: {fileID: 2446191941271261843}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64ee7c39646b997499ef0a409d7c6945, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &990265749 stripped
 SpriteRenderer:
   m_CorrespondingSourceObject: {fileID: 2379958312995661505, guid: 7f600839cf7b93843a2295ca713c0d71, type: 3}
@@ -528,6 +566,10 @@ PrefabInstance:
     - target: {fileID: 3870028642547056280, guid: f529dfd6c39784f498d0ae158bc9023d, type: 3}
       propertyPath: m_Name
       value: Outlet (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3959806538834647337, guid: f529dfd6c39784f498d0ae158bc9023d, type: 3}
+      propertyPath: _color
+      value: red
       objectReference: {fileID: 0}
     - target: {fileID: 3959806538834647337, guid: f529dfd6c39784f498d0ae158bc9023d, type: 3}
       propertyPath: _renderer
@@ -778,6 +820,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dc70e5da6b98b7643bdbc9fa8ad40410, type: 3}
+--- !u!212 &1403570140 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 2379958312995661505, guid: 7f600839cf7b93843a2295ca713c0d71, type: 3}
+  m_PrefabInstance: {fileID: 1611442409}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1534278284
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1460,6 +1507,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cable
       objectReference: {fileID: 0}
+    - target: {fileID: 3953526543020128242, guid: 6423491d4ba9ca04096dac458285e415, type: 3}
+      propertyPath: topTip
+      value: 
+      objectReference: {fileID: 36833922}
+    - target: {fileID: 3953526543020128242, guid: 6423491d4ba9ca04096dac458285e415, type: 3}
+      propertyPath: bottomTip
+      value: 
+      objectReference: {fileID: 943291572}
+    - target: {fileID: 3953526543020128242, guid: 6423491d4ba9ca04096dac458285e415, type: 3}
+      propertyPath: _interseptionEffectSprite
+      value: 
+      objectReference: {fileID: 1403570140}
     - target: {fileID: 7428906162107175297, guid: 6423491d4ba9ca04096dac458285e415, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
