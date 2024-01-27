@@ -9,6 +9,8 @@ public class CableTip : MonoBehaviour , IBeginDragHandler, IEndDragHandler, IDra
 
     private Outlet _currentOutlet;
     private bool isCanStay = true;
+
+    public string color;
     private void OnTriggerEnter2D(Collider2D other)
     {
 

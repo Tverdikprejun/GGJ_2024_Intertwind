@@ -17,16 +17,26 @@ public class Outlet : MonoBehaviour
     [SerializeField]
     public string color;
 
-    public bool GetIsOccupied() => _currentCableTip != null;
+    public bool GetIsOccupied()
+    {
+        if(_currentCableTip != null &&_currentCableTip.color == color)return true;
+        else return false;
+    }
 
     private void Start()
     {
-        if(color == "blue")
+        Color blue = new Color32(65, 160, 255,255);
+        Color red = new Color32(255, 75, 65, 255);
+        Color magenta = new Color32(255, 40, 255, 255);
+        if (color == "blue")
         {
-            _renderer.color = new Color(65, 160, 255);
+            _renderer.color = blue;
         }else if(color == "red")
         {
-            _renderer.color = new Color(65, 160, 255);
+            _renderer.color = red;
+        }else if(color == "magenta")
+        {
+            _renderer.color = magenta;
         }
     }
     public void SetCableTip(CableTip cableTip)
