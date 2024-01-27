@@ -8,7 +8,7 @@ public class CableTip : MonoBehaviour , IBeginDragHandler, IEndDragHandler, IDra
     private float distanceToCamera;
 
     private Outlet _currentOutlet;
-    private bool isCanStay;
+    private bool isCanStay = true;
     private void OnTriggerEnter2D(Collider2D other)
     {
 
@@ -35,7 +35,7 @@ public class CableTip : MonoBehaviour , IBeginDragHandler, IEndDragHandler, IDra
         _currentOutlet.ResetCableTip();
 
         _currentOutlet = null;
-        isCanStay = false;
+        isCanStay = true;
     }
 
     void IBeginDragHandler.OnBeginDrag(PointerEventData eventData)
@@ -60,8 +60,8 @@ public class CableTip : MonoBehaviour , IBeginDragHandler, IEndDragHandler, IDra
         // check here for "am i close enough to where I'm meant to be"
 
         // if not "where I'm supposed to be" reset
-        //if(!isCanStay) { 
-          //  objectBeingDragged.transform.position = startPosition;}
+        if(!isCanStay) { 
+            objectBeingDragged.transform.position = startPosition;}
         objectBeingDragged.layer = LayerMask.NameToLayer("Default");
         objectBeingDragged = null;
     }
