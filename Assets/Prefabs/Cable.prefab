@@ -124,7 +124,7 @@ LineRenderer:
       atime5: 0
       atime6: 0
       atime7: 0
-      m_Mode: 0
+      m_Mode: 1
       m_ColorSpace: 0
       m_NumColorKeys: 2
       m_NumAlphaKeys: 2
@@ -151,8 +151,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f2560587b173d3419603d10e0eb2f1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _interseptionEffectSprite: {fileID: 0}
   bottomTip: {fileID: 0}
   topTip: {fileID: 0}
+  isShorted: 0
 --- !u!68 &1505758213565123062
 EdgeCollider2D:
   m_ObjectHideFlags: 0
