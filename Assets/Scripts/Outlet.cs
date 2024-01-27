@@ -39,7 +39,7 @@ public class Outlet : MonoBehaviour
     public void SetCableTip(CableTip cableTip)
     {
         _currentCableTip = cableTip;
-        if (cableTip.color == color)
+        if (cableTip.color == color && cableTip.isShorted == false)
         {
             isWinCondition = true;
             ChangeSprite(true);

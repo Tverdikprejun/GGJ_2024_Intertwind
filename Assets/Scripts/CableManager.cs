@@ -33,6 +33,8 @@ public class CableManager : MonoBehaviour
         foreach (Cable cable in cables)
         {
             cable.isShorted = false;
+            cable.topTip.isShorted = false;
+            cable.bottomTip.isShorted = false;
         }
             foreach (Cable cable in cables)
         {
@@ -43,6 +45,10 @@ public class CableManager : MonoBehaviour
                 {
                     cable.isShorted = true;
                     cable2.isShorted = true;
+                    cable.topTip.isShorted = true;
+                    cable.bottomTip.isShorted = true;
+                    cable2.topTip.isShorted = true;
+                    cable2.bottomTip.isShorted = true;
                 }
                 
             }

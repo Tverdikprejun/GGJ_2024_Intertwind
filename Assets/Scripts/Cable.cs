@@ -10,10 +10,10 @@ public class Cable : MonoBehaviour
     private SpriteRenderer _interseptionEffectSprite;
 
     [SerializeField]
-    private CableTip bottomTip;
+    public CableTip bottomTip;
     
     [SerializeField]
-    private CableTip topTip;
+    public CableTip topTip;
 
     [SerializeField]
     public string color;

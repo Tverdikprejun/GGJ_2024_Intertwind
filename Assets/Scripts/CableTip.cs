@@ -11,6 +11,7 @@ public class CableTip : MonoBehaviour , IBeginDragHandler, IEndDragHandler, IDra
     private bool isCanStay = true;
 
     public string color;
+    public bool isShorted;
     private void OnTriggerEnter2D(Collider2D other)
     {
 

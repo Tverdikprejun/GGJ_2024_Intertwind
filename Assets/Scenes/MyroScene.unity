@@ -391,6 +391,10 @@ PrefabInstance:
       value: Outlet (2)
       objectReference: {fileID: 0}
     - target: {fileID: 3959806538834647337, guid: f529dfd6c39784f498d0ae158bc9023d, type: 3}
+      propertyPath: color
+      value: magenta
+      objectReference: {fileID: 0}
+    - target: {fileID: 3959806538834647337, guid: f529dfd6c39784f498d0ae158bc9023d, type: 3}
       propertyPath: _renderer
       value: 
       objectReference: {fileID: 1707165100}
@@ -566,6 +570,10 @@ PrefabInstance:
     - target: {fileID: 3870028642547056280, guid: f529dfd6c39784f498d0ae158bc9023d, type: 3}
       propertyPath: m_Name
       value: Outlet (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3959806538834647337, guid: f529dfd6c39784f498d0ae158bc9023d, type: 3}
+      propertyPath: color
+      value: red
       objectReference: {fileID: 0}
     - target: {fileID: 3959806538834647337, guid: f529dfd6c39784f498d0ae158bc9023d, type: 3}
       propertyPath: _color
@@ -838,9 +846,21 @@ PrefabInstance:
       value: Outlet (3)
       objectReference: {fileID: 0}
     - target: {fileID: 3959806538834647337, guid: f529dfd6c39784f498d0ae158bc9023d, type: 3}
+      propertyPath: color
+      value: blue
+      objectReference: {fileID: 0}
+    - target: {fileID: 3959806538834647337, guid: f529dfd6c39784f498d0ae158bc9023d, type: 3}
       propertyPath: _renderer
       value: 
       objectReference: {fileID: 1853488143}
+    - target: {fileID: 4372691804398889892, guid: f529dfd6c39784f498d0ae158bc9023d, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 6bc7638c4d8219b4080b3af889950a98, type: 3}
+    - target: {fileID: 4372691804398889892, guid: f529dfd6c39784f498d0ae158bc9023d, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6885618164391487913, guid: f529dfd6c39784f498d0ae158bc9023d, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.5522337
@@ -1176,6 +1196,10 @@ PrefabInstance:
       value: Cable (1)
       objectReference: {fileID: 0}
     - target: {fileID: 3953526543020128242, guid: 6423491d4ba9ca04096dac458285e415, type: 3}
+      propertyPath: color
+      value: blue
+      objectReference: {fileID: 0}
+    - target: {fileID: 3953526543020128242, guid: 6423491d4ba9ca04096dac458285e415, type: 3}
       propertyPath: topTip
       value: 
       objectReference: {fileID: 1111869253}
@@ -1250,6 +1274,10 @@ PrefabInstance:
       value: Cable (2)
       objectReference: {fileID: 0}
     - target: {fileID: 3953526543020128242, guid: 6423491d4ba9ca04096dac458285e415, type: 3}
+      propertyPath: color
+      value: red
+      objectReference: {fileID: 0}
+    - target: {fileID: 3953526543020128242, guid: 6423491d4ba9ca04096dac458285e415, type: 3}
       propertyPath: topTip
       value: 
       objectReference: {fileID: 102650427}
@@ -1304,6 +1332,22 @@ PrefabInstance:
     - target: {fileID: 7428906162107175297, guid: 6423491d4ba9ca04096dac458285e415, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8896519893542899166, guid: 6423491d4ba9ca04096dac458285e415, type: 3}
+      propertyPath: m_Parameters.colorGradient.atime1
+      value: 65535
+      objectReference: {fileID: 0}
+    - target: {fileID: 8896519893542899166, guid: 6423491d4ba9ca04096dac458285e415, type: 3}
+      propertyPath: m_Parameters.colorGradient.ctime0
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8896519893542899166, guid: 6423491d4ba9ca04096dac458285e415, type: 3}
+      propertyPath: m_Parameters.colorGradient.key1.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8896519893542899166, guid: 6423491d4ba9ca04096dac458285e415, type: 3}
+      propertyPath: m_Parameters.colorGradient.key1.r
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1508,6 +1552,10 @@ PrefabInstance:
       value: Cable
       objectReference: {fileID: 0}
     - target: {fileID: 3953526543020128242, guid: 6423491d4ba9ca04096dac458285e415, type: 3}
+      propertyPath: color
+      value: red
+      objectReference: {fileID: 0}
+    - target: {fileID: 3953526543020128242, guid: 6423491d4ba9ca04096dac458285e415, type: 3}
       propertyPath: topTip
       value: 
       objectReference: {fileID: 36833922}
@@ -1558,6 +1606,10 @@ PrefabInstance:
     - target: {fileID: 7428906162107175297, guid: 6423491d4ba9ca04096dac458285e415, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8896519893542899166, guid: 6423491d4ba9ca04096dac458285e415, type: 3}
+      propertyPath: m_Parameters.colorGradient.m_Mode
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
